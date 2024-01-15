@@ -1,5 +1,9 @@
 <p align="center"><img width=100% src="https://github.com/Zabooby/qbittorrent-/assets/78969986/0b2649d4-340b-4d16-b7e5-1aef0368ec19" alt="mpv screenshot"></p>
 
+# qBitorrent Theme
+
+A dark blue theme for [qBittorent](https://www.qbittorrent.org/).
+
 ## Download
 
 Open up Options (ALT+O) and check `Use custom UI Theme` and select the `blue.qbtheme` file.
