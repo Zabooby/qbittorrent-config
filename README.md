@@ -10,4 +10,4 @@ Generating a .qbtheme file
 
 1. Run `./build.bat` to generate the `blue.qbtheme` file.
 
-Look through `stylesheet.qss`, it contains all the style changes and refer to [QT Style Sheets Examples](https://doc.qt.io/qt-6/stylesheet-examples.html)https://doc.qt.io/qt-6/stylesheet-examples.html if you wish.
+Look through `stylesheet.qss`, it contains all the style changes and refer to [QT Style Sheets Examples](https://doc.qt.io/qt-6/stylesheet-examples.html) if you wish.
