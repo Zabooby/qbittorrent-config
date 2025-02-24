@@ -1,59 +1,65 @@
-/*
-  qBittorrent / Blue Theme
-*/
-
+/* Global styles */
 QWidget {
-  background: #192330;
-  color: #a1b5ce;
-  border: none;
+  background-color: #3b4252;
+  color: #eceff4;
+  selection-background-color: #81a1c1;
+  selection-color: #eceff4;
 }
 
-/*
-  QMenuBar
-*/
+/* Tabs */
+QTabWidget::pane {
+  margin: 0;
+  padding: 0;
+}
+
+QTabBar::tab {
+  background-color: #3b4252;
+  padding: 6px 16px;
+}
+
+QTabBar::tab:selected {
+  background-color: #434c5e;
+  border-bottom: 1px solid #5e81ac;
+}
 
 QMenuBar {
-  background: #192330;
+  background-color: #2e3440;
 }
 
+/* QMenuBar */
 QMenuBar::item {
-  padding: 5px 10px;
-  width: 100%;
-  color: #a1b5ce;
+  padding: 4px 8px;
 }
 
 QMenuBar::item:selected {
-  background: #1E2021;
+  background-color: #4c566a;
 }
 
 QMenuBar::item:pressed {
-  background: #222;
+  background-color: #4c566a;
 }
 
-/*
-  QMenu
-*/
-
+/* QMenu */
 QMenu {
-  background: #192330;
-  border: 1px solid #222;
-  left: 50px;
+  border: 1px solid #4c566a;
+  border-radius: 2px;
+  padding: 4px;
 }
 
+/* The items inside the menu dropdown of things like "File", "Edit", "View", etc */
 QMenu::item {
-  margin: 0;
-  padding: 5px 10px 5px 5px;
-  background: #192330;
-  color: #a1b5ce;
+  padding: 4px 22px 4px 8px;
+  border-radius: 4px;
 }
 
 QMenu::item:selected {
-  background: #1E2021;
+  background-color: #4c566a;
 }
 
 QMenu::separator {
-  background: #222;
+  background-color: #4c566a;
   height: 1px;
+  margin: 4px;
 }
 
 QMenu::icon {
@@ -61,540 +67,570 @@ QMenu::icon {
 }
 
 QMenu::indicator {
-  padding: 0 5px;
+  height: 16px;
+  width: 16px;
+  left: 5px;
+}
+
+QMenu::right-arrow {
+  width: 18px;
+  height: 18px;
+  padding-right: 5px;
+  image: url(':/uitheme/icons/branch_closed.svg');
 }
 
 QMenu::indicator:checked {
-  image: url(:/uitheme/assets/checkbox_checked.svg);
-  background: #a1b5ce;
+  image: url(':/uitheme/icons/check.svg');
 }
 
-QMenu::indicator:unchecked {
-  image: url(:/uitheme/assets/checkbox_unchecked.svg);
+QStatusBar {
+  background-color: #2e3440;
 }
 
-/*
-  QToolBar
-*/
+QStatusBar::item {
+  border: none;
+  padding: 4px;
+}
 
+QStatusBar QLabel, QStatusBar QWidget, QStatusBar QPushButton, QStatusBar QPushButton:active {
+  background-color: #2e3440;
+}
+
+/* ToolBar */
 QToolBar {
-  background: #192330;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
+  border: none;
+  spacing: 2px;
+  padding: 0px 4px;
+}
+
+QToolBar QToolButton {
+  background-color: #3b4252;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+QToolBar QToolButton:hover {
+  background-color: #4c566a;
+}
+
+QToolBar QToolButton:checked {
+  background-color: #85c1dc;
 }
 
 QToolBar::separator {
-  background: #222;
-  width: 1px;
+  width: 2px;
+  margin: 4px 0;
 }
 
-/*
-  QToolButton
-*/
-
-QToolButton {
-  padding: 5px;
-  border: none;
-  background: #192330;
-}
-
-QToolButton:hover {
-  background: #1E2021;
-  border: none;
-}
-
-QToolButton:pressed {
-  background: #222;
-  padding: 0;
-}
-
-/*
-  QLineEdit in QToolBar
-*/
-
-QToolBar QLineEdit {
-  background: #192330;
-  margin: 0 5px;
-}
-
-/*
-  QSplitter
-*/
-
-QSplitter::handle {
-  background: #1E2021;
-}
-
-QSplitter::handle:horizontal {
-  width: 1px;
-}
-
-QSplitter::handle:vertical {
-  height: 1px;
-}
-
-QSplitter::handle:pressed {
-  background: #222;
-}
-
-/*
-  QMainWindow
-*/
-
-QMainWindow {
-  background: #192330;
-}
-
-/*
-  QFrame
-*/
-
-QFrame, QLabel {
-  outline: none;
-  background: #192330;
-  color: #a1b5ce;
-}
-
-QLabel:disabled {
-  color: #555;
-}
-
-/*
-  QToolTip
-*/
-
+/* QToolTip */
 QToolTip {
-  padding: 5px;
-  background: #192330;
-  border: 2px solid #222;
-  color: #a1b5ce;
+  background-color: #434c5e;
+  border: 1px solid #4c566a;
+  color: #eceff4;
+  padding: 3px;
 }
 
-/*
-  QTabWidget
-*/
-
-QTabWidget::pane {
-  margin: 0;
-  padding: 0;
-}
-
-/*
-  QTABBAR
-  top
-*/
-
-QTabBar::tab:top {
-  background: #1E2021;
-  color: #a1b5ce;
-  margin: 0;
-  padding: 5px;
-}
-
-QTabBar::tab:top:hover {
-  background: #222;
-}
-
-QTabBar::tab:top:selected {
-  background: #222;
-}
-
-/*
-  QListView
-*/
-QListView {
-  background: #192330;
-  color: #a1b5ce;
+/* Button in LineEdit */
+QLineEdit QToolButton, QLineEdit QToolButton:hover {
+  background-color: transparent;
+  border-radius: 4px;
   border: none;
+  margin-right: 2px;
+}
+
+/* Text fields */
+QLineEdit, QTextEdit, QPlainTextEdit {
+  background-color: #434c5e;
+  border: 2px solid #3b4252;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #eceff4;
+}
+
+QLineEdit:hover, QTextEdit:hover, QPlainTextEdit:hover {
+  border: 1px solid #5e81ac;
+}
+
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus {
+  background-color: #4c566a;
+  border: 1px solid #5e81ac;
+}
+
+QLineEdit:disabled, QTextEdit:disabled, QPlainTextEdit:disabled {
+  background-color: #2e3440;
+  border: 1px solid #4c566a;
+  color: #4c566a;
+}
+
+/* Group boxes */
+QGroupBox {
+  background-color: #3b4252;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+QGroupBox:title {
+  left: 10px;
+  top: 8px;
+}
+
+QGroupBox QLabel, QGroupBox QCheckBox, QGroupBox QTextBrowser {
+  background-color: #3b4252;
+}
+
+/* Frame */
+QFrame {
+  border: none;
+}
+
+/* List view */
+/* The side panel on the left */
+QListView {
+  background-color: #3b4252;
+  border-radius: 4px;
+  outline: none;
 }
 
 QListView::item {
-  padding: 5px;
+  border-radius: 4px;
+  padding: 4px;
 }
 
 QListView::item:hover {
-  background: #1E2021;
-  padding: 0px;
+  background-color: #4c566a;
 }
 
 QListView::item:selected:active {
-  outline: none;
-  background: #1E2021;
-  padding: 0px;
+  background-color: #4c566a;
 }
 
-QListView::item:selected:!active {
-  background: #1E2021;
-  color: #a1b5ce;
-  padding: 0px;
-}
-
-/*
-  QTableView
-*/
-
-QTableView {
-  background: #222;
-  border: none;
-}
-
-QTableView QLabel {
-  padding: 0 5px;
-}
-
-QTableView QCheckBox {
-  padding-left: 5px;
-}
-
-/*
-  QTreeView
-*/
-
-QTreeView {
-  background: #192330;
-  color: #a1b5ce;
-  border: none;
-}
-
-QTreeView::item {
-  padding: 5px;
-}
-
-QTreeView::item:hover {
-  background: #1E2021;
-  padding: 0px;
-}
-
-QTreeView::item:pressed {
-  background: #222;
-  padding: 0px;
-}
-
-QTreeView::item:selected {
-  background: #1E2021;
-  color: #a1b5ce;
-  padding: 0px;
-}
-
-QTreeView:disabled {
-  color: #555;
-}
-
+/* Abstract item view */
 QAbstractItemView {
-  alternate-background-color: #192330;
+  alternate-background-color: #3b4252;
 }
 
-/*
-  QProgrssBar
-*/
-
-QProgressBar {
-  text-align: center;
-  border: 1px solid #1E2021;
-}
-
-QProgressBar::chunk {
-  background: #1e90ff;
-}
-
-QProgressBar::chunk:disabled {
-  background: #014377;
-}
-
-/*
-  QScrollBar / horizontal
-*/
-
-QScrollBar:horizontal {
-  background: #1E2021;
-  margin: 0px 20px;
-}
-
-QScrollBar::handle:horizontal {
-  background: #333;
-  width: 20px;
-}
-
-QScrollBar::add-line:horizontal,
-QScrollBar::sub-line:horizontal
-{
-  background: #1E2021;
-  width: 20px;
-  subcontrol-origin: margin;
-}
-
-QScrollBar::add-line:horizontal {
-  subcontrol-position: right;
-}
-
-QScrollBar::sub-line:horizontal {
-  subcontrol-position: left;
-}
-
-QScrollBar:left-arrow:horizontal,
-QScrollBar::right-arrow:horizontal
-{
-  width: 5px;
-  height: 5px;
-  background: #a1b5ce;
-}
-
-QScrollBar::add-page:horizontal,
-QScrollBar::sub-page:horizontal
-{
-  background: none;
-}
-
-/*
-  QScrollBar / vertical
-*/
-
-QScrollBar:vertical {
-  background: #1E2021;
-  margin: 20px 0;
-}
-
-QScrollBar::handle:vertical {
-  background: #222;
-  height: 20px;
-}
-
-QScrollBar::add-line:vertical,
-QScrollBar::sub-line:vertical
-{
-  background: #1E2021;
-  height: 20px;
-  subcontrol-origin: margin;
-}
-
-QScrollBar::add-line:vertical {
-  subcontrol-position: bottom;
-}
-
-QScrollBar::sub-line:vertical {
-  subcontrol-position: top;
-}
-
-QScrollBar::up-arrow:vertical {
-  image: url(:/uitheme/assets/up_arrow.svg);
-}
-
-QScrollBar::down-arrow:vertical {
-  image: url(:/uitheme/assets/down_arrow.svg);
-}
-
-QScrollBar::add-page:vertical,
-QScrollBar::sub-page:vertical
-{
-  background: none;
-}
-
-/*
-  QPushButton
-*/
-
-QPushButton,
-QPushButton:enabled
-{
-  padding: 5px 10px;
-  background: #1E2021;
-  color: #a1b5ce;
-}
-
-QPushButton:hover {
-  background: #222;
-}
-
-QPushButton:focus {
-  outline: none;
-  background: #222;
-}
-
-QPushButton:pressed {
-  padding: 5px 10px;
-  border: none;
-  background: #333;
-}
-
-QPushButton:disabled {
-  color: #555;
-}
-
-/*
-  QLineEdit
-*/
-
-QLineEdit,
-QLineEdit:read-only
-{
-  background: #1E2021;
-  color: #a1b5ce;
-  border: none;
-  padding: 4px;
-}
-
-QLineEdit:disabled,
-QLineEdit:disabled:read-only
-{
-  color: #555;
-}
-
-/*
-  QHeaderView
-*/
-
-QHeaderView::section {
-  background: #192330;
-  padding: 0 5px;
-  color: #a1b5ce;
-}
-
-QHeaderView::section:hover {
-  background: #1E2021;
-}
-
-QHeaderView::down-arrow {
-  image: url(:/uitheme/assets/down_arrow.svg);
-  height: 12px;
-  margin: 5px;
-  width: 12px;
+/* Header view */
+/* Table Heading */
+QHeaderView {
+  background-color: #434c5e;
 }
 
 QHeaderView::up-arrow {
-  image: url(:/uitheme/assets/up_arrow.svg);
-  height: 12px;
-  margin: 5px;
-  width: 12px;
+  width: 18px;
+  height: 18px;
+  image: url(':/uitheme/icons/chevron_up.svg');
 }
 
-/*
-  QDialog
-*/
-
-QDialog {
-  background: #192330;
+QHeaderView::down-arrow {
+  width: 18px;
+  height: 18px;
+  image: url(':/uitheme/icons/chevron_down.svg');
 }
 
-/*
-  QCheckbox
-*/
-
-QCheckBox:disabled {
-  color: #555;
+/* Table Heading */
+QHeaderView::section {
+  background-color: #434c5e;
+  border: none;
+  border-left: 1px solid #3b4252;
+  border-right: 1px solid #3b4252;
+  padding: 2px 4px;
 }
 
-/*
-  QComboBox
-*/
+QHeaderView::section:first {
+  border-left: none;
+}
 
+QHeaderView::section:last {
+  border-right: none;
+}
+
+QHeaderView::section:hover {
+  background-color: #4c566a;
+}
+
+/* TreeView */
+/* Weirdly seems to be the main area where you can see your transfers */
+QTreeView {
+  background-color: #3b4252;
+}
+
+QTreeView::item {
+  background-color: #3b4252;
+}
+
+QTreeView::item:hover, QTreeView::item:selected {
+  background-color: #4c566a;
+}
+
+QTreeView QScrollBar:horizontal, QTreeView QScrollBar:vertical {
+  background-color: #3b4252;
+}
+
+QTreeView::branch:has-children:open {
+  image: url(':/uitheme/icons/branch_open.svg');
+}
+
+QTreeView::branch:has-children:closed {
+  image: url(':/uitheme/icons/branch_closed.svg');
+}
+
+/* ScrollBars */
+::corner {
+  border: none;
+}
+
+QScrollBar:vertical {
+  background-color: transparent;
+  width: 14px;
+  margin: 0px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+  border: none;
+  background-color: none;
+  height: 0px;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical, QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+  border: none;
+  background-color: none;
+  color: none;
+}
+
+QScrollBar:horizontal {
+  background-color: transparent;
+  height: 14px;
+  margin: 0px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+  border: none;
+  background-color: none;
+  width: 0px;
+}
+
+QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal, QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+  border: none;
+  background-color: none;
+  color: none;
+}
+
+QScrollBar::handle {
+  background-color: #4c566a;
+  border: 1px solid #4c566a;
+  margin: 2px;
+}
+
+QScrollBar::handle:hover {
+  background-color: #4c566a;
+  border-color: #4c566a;
+}
+
+QScrollBar::handle:pressed {
+  background-color: #4c566a;
+  border-color: #4c566a;
+}
+
+QScrollBar::handle:vertical {
+  min-height: 20px;
+}
+
+QScrollBar::handle:horizontal {
+  min-width: 20px;
+}
+
+/* Buttons */
+/* The buttons like "Select All", "General", "Trackers", "Peers", etc */
+QPushButton {
+  background-color: #3b4252;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 3px;
+}
+
+QPushButton:hover {
+  background-color: #4c566a;
+}
+
+QPushButton:pressed {
+  background-color: #4c566a;
+}
+
+QPushButton:disabled {
+  background-color: #2e3440;
+}
+
+/* ToolButton */
+QToolButton {
+  background-color: #4c566a;
+  border-radius: 4px;
+  border: none;
+  padding: 6px;
+}
+
+QToolButton:hover {
+  background-color: #4c566a;
+}
+
+QToolButton:pressed {
+  background-color: #2e3440;
+}
+
+QToolButton:checked {
+  background-color: #4c566a;
+}
+
+QToolButton:disabled {
+  background-color: #2e3440;
+}
+
+/* QTableView */
+QTableView QLabel, QTableView QCheckBox {
+  background-color: #434c5e;
+  padding: 0 5px;
+}
+
+QTableView QSpinBox {
+  background-color: #4c566a;
+  border: none;
+}
+
+QTableView QComboBox, QTableView QLineEdit, QTableView QAbstractSpinBox {
+  background-color: #434c5e;
+  border-radius: 0;
+}
+
+/* QLabel */
+QLabel {
+  background-color: transparent;
+}
+
+/* QDialog */
+QDialog QTabWidget QTextEdit, QDialog QTabWidget QWidget {
+  background-color: #3b4252;
+  border-radius: 0;
+}
+
+QDialog QScrollBar:horizontal, QDialog QScrollBar:vertical {
+  background-color: #434c5e;
+}
+
+/* QProgressBar */
+QProgressBar {
+  text-align: center;
+  background-color: #4c566a;
+  border-radius: 2px;
+  color: #e5e9f0;
+  margin: 2px 4px;
+}
+
+QProgressBar::chunk {
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+    stop: 0 #5e81ac, stop: 1 #81a1c1);
+  border-radius: 2px;
+  margin: 0px;
+}
+
+/* Combo Box */
+/* Basically normal dropdown lists (like github custom properties) */
 QComboBox {
-  background: #1E2021;
-  color: #a1b5ce;
-  padding: 4px;
+  background-color: #434c5e;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
-QComboBox:focus {
-  background: #222;
+QComboBox:hover {
+  border-color: #4c566a;
 }
 
 QComboBox:disabled {
-  color: #555;
-}
-
-QComboBox:on {
-  background: #222;
-}
-
-QComboBox QAbstractItemView {
-  background: #1E2021;
-  selection-background-color: #222;
-  selection-color: #a1b5ce;
-  outline: none;
+  background-color: #2e3440;
+  color: #4c566a;
 }
 
 QComboBox::drop-down {
-  subcontrol-origin: margin;
-  subcontrol-position: top right;
-  width: 6ex;
-  background: #1E2021;
+  background-color: #3b4252;
+  width: 20px;
+  border: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 QComboBox::down-arrow {
-  image: url(:/uitheme/assets/down_arrow.svg);
+  image: url(':/uitheme/icons/arrow_down.svg');
+  width: 20px;
+  height: 20px;
 }
 
 QComboBox::down-arrow:disabled {
-  image: url(:/uitheme/assets/down_arrow_disabled.svg);
+  image: url(':/uitheme/icons/arrow_down_disabled.svg');
 }
 
-/*
-  QSpinBox
-*/
+QComboBox QAbstractItemView {
+  background-color: #434c5e;
+  padding: 3px 0;
+  border: 1px solid #4c566a;
+  border-radius: 0;
+}
 
-QSpinBox {
-  background: #1E2021;
-  color: #a1b5ce;
+/* Spin Box */
+QAbstractSpinBox {
+  background-color: #434c5e;
+  border: 1px solid #4c566a;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+QAbstractSpinBox:hover {
+  border: 1px solid #4c566a;
+}
+
+QAbstractSpinBox:focus {
+  background-color: #4c566a;
+  border: 1px solid #5e81ac;
+}
+
+QAbstractSpinBox:disabled {
+  background-color: #2e3440;
+  border: 1px solid #4c566a;
+  color: #4c566a;
+}
+
+QAbstractSpinBox::up-button {
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  image: url(':/uitheme/icons/chevron_up.svg');
+}
+
+QAbstractSpinBox::up-button:disabled {
+  image: url(':/uitheme/icons/chevron_up_disabled.svg');
+}
+
+QAbstractSpinBox::up-button:hover {
+  background-color: #4c566a;
+}
+
+QAbstractSpinBox::up-button:pressed {
+  background-color: #2e3440;
+}
+
+QAbstractSpinBox::down-button {
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  image: url(':/uitheme/icons/chevron_down.svg');
+}
+QAbstractSpinBox::down-button:disabled {
+  image: url(':/uitheme/icons/chevron_down_disabled.svg');
+}
+
+QAbstractSpinBox::down-button:hover {
+  background-color: #4c566a;
+}
+
+QAbstractSpinBox::down-button:pressed {
+  background-color: #2e3440;
+}
+
+/* CheckBox */
+QCheckBox::indicator, QGroupBox::indicator, QTreeView::indicator {
+  width: 17px;
+	height: 17px;
+}
+
+QCheckBox::indicator:checked, QGroupBox::indicator:checked, QTreeView::indicator:checked {
+  image: url(':/uitheme/icons/checkbox_checked.svg');
+}
+
+QCheckBox::indicator:unchecked, QGroupBox::indicator:unchecked, QTreeView::indicator:unchecked {
+  image: url(':/uitheme/icons/checkbox_unchecked.svg');
+}
+
+QCheckBox::indicator:indeterminate, QGroupBox::indicator:indeterminate, QTreeView::indicator:indeterminate {
+  image: url(':/uitheme/icons/checkbox_indeterminate.svg');
+}
+
+QCheckBox::branch:has-children:open {
+  image: url(':/uitheme/icons/branch_open.svg');
+}
+
+QCheckBox::branch:has-children:closed {
+  image: url(':/uitheme/icons/branch_closed.svg');
+}
+
+/* Sliders */
+QSlider {
+  background-color: #3b4252;
+}
+
+QSlider::groove:horizontal {
+  background-color: #2e3440;
+  border-radius: 2px;
   border: none;
-  padding: 4px;
+  height: 4px;
 }
 
-QSpinBox:disabled {
-  color: #555;
-}
-
-QSpinBox:focus {
-  background: #222;
-}
-
-/*
-  QGroupBox
-*/
-
-QGroupBox {
-  background: #192330;
-  border: 2px solid #232629;
-  padding: 5px;
-  margin-top: 15px;
+QSlider::handle:horizontal {
+  background-color: #5e81ac;
   border-radius: 5px;
+  border: none;
+  height: 10px;
+  width: 10px;
+  margin: -3px 0;
 }
 
-QGroupBox::title {
-  subcontrol-origin: margin;
-  subcontrol-position: top left;
-  left: 10px;
-  padding: 8px 5px 20px 5px;
+QSlider::handle:horizontal:hover {
+  background-color: #81a1c1;
 }
 
-QGroupBox QLabel {
-  color: #aaa;
+QSlider::sub-page:horizontal {
+  background-color: #5e81ac;
+  border-radius: 2px;
 }
 
-QGroupBox QCheckBox {
-  color: #aaa;
+QSlider::groove:vertical {
+  background-color: #2e3440;
+  border-radius: 2px;
+  border: none;
+  width: 4px;
 }
 
-QGroupBox::title:disabled {
-  color: #555;
+QSlider::handle:vertical {
+  background-color: #5e81ac;
+  border-radius: 5px;
+  border: none;
+  height: 10px;
+  width: 10px;
+  margin: 0 -3px;
 }
 
-TransferListWidget {
-  qproperty-downloadingStateForeground: #03c03c;
-  qproperty-forcedDownloadingStateForeground: #03c03c;
-  qproperty-downloadingMetadataStateForeground: #03c03c;
-  qproperty-allocatingStateForeground: #cccccc;
-  qproperty-stalledDownloadingStateForeground: #fdfd96;
-  qproperty-stalledUploadingStateForeground: #fdfd96;
-  qproperty-uploadingStateForeground: #63b8ff;
-  qproperty-forcedUploadingStateForeground: #63b8ff;
-  qproperty-pausedDownloadingStateForeground: #c23b22;
-  qproperty-pausedUploadingStateForeground: #c23b22;
-  qproperty-errorStateForeground: red;
-  qproperty-missingFilesStateForeground: red;
-  qproperty-queuedDownloadingStateForeground: #00cdcd;
-  qproperty-queuedUploadingStateForeground: #00cdcd;
-  qproperty-checkingDownloadingStateForeground: #00cdcd;
-  qproperty-checkingUploadingStateForeground: #00cdcd;
-  qproperty-checkingResumeDataStateForeground: #00cdcd;
-  qproperty-movingStateForeground: #00cdcd;
-  qproperty-unknownStateForeground: red;
+QSlider::handle:vertical:hover {
+  background-color: #81a1c1;
+}
+
+QSlider::add-page:vertical {
+  background-color: #5e81ac;
+  border-radius: 2px;
+}
+
+QSplitter {
+  background-color: #3b4252;
+}
+
+QRadioButton::indicator {
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+QRadioButton::indicator::unchecked {
+  border: 1px solid #4c566a;
+}
+
+QRadioButton::indicator::checked {
+  border: none;
+  background-color: #5e81ac;
 }

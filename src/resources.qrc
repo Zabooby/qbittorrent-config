@@ -2,12 +2,17 @@
 	<qresource>
 		<file>stylesheet.qss</file>
 		<file>config.json</file>
-		<file>icons/stalledDL.svg</file>
-		<file>icons/stalledUP.svg</file>
-		<file>assets/checkbox_checked.svg</file>
-		<file>assets/checkbox_unchecked.svg</file>
-		<file>assets/down_arrow.svg</file>
-		<file>assets/down_arrow_disabled.svg</file>
-		<file>assets/up_arrow.svg</file>
+    		<file>icons/checkbox_checked.svg</file>
+		<file>icons/checkbox_unchecked.svg</file>
+                <file>icons/checkbox_indeterminate.svg</file>
+    		<file>icons/check.svg</file>
+    		<file>icons/arrow_down.svg</file>
+    		<file>icons/arrow_down_disabled.svg</file>
+    		<file>icons/chevron_up.svg</file>
+    		<file>icons/chevron_up_disabled.svg</file>
+    		<file>icons/chevron_down.svg</file>
+    		<file>icons/chevron_down_disabled.svg</file>
+    		<file>icons/branch_open.svg</file>
+    		<file>icons/branch_closed.svg</file>
 	</qresource>
 </RCC>
