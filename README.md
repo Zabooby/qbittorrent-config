@@ -7,8 +7,8 @@ A dark blue theme for [qBittorent](https://www.qbittorrent.org/), based on the [
 ## Installation 
 
 1. Download the theme file `blue.qbtheme`. 
-2. Open qBittorrent and go to Tools > Options and then enable "use custom UI theme"
-3. Browse for the `blue.qbtheme` file and select it. 
+2. Open qBittorrent and go to Tools > Options and then enable "Use custom UI theme"
+3. Browse for the `blue.qbtheme` file, select it and apply. 
 4. Restart qBittorrent for the changes to take effect
 
 ## Create your own
