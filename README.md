@@ -1,6 +1,6 @@
 # qBittorrent Theme
 
-<p align="center"><img width=100% src="https://github.com/user-attachments/assets/3efbfbd6-567c-4dec-8dca-12725e2d9bcf" alt="mpv screenshot"></p>
+<p align="center"><img width=100% src="https://github.com/user-attachments/assets/4a5e084c-4e08-4ec3-9557-84c8f8d08324" alt="mpv screenshot"></p>
 
 A dark blue theme for [qBittorrent](https://www.qbittorrent.org/), based on the [Nord](https://www.nordtheme.com/) colour scheme.
 
