@@ -254,10 +254,11 @@ QHeaderView::section:hover {
 /* Weirdly seems to be the main area where you can see your transfers */
 QTreeView {
   background-color: #3b4252;
+  alternate-background-color: #2e3440;
 }
 
 QTreeView::item {
-  background-color: #3b4252;
+  background-color: transparent;
 }
 
 QTreeView::item:hover, QTreeView::item:selected {
@@ -274,6 +275,10 @@ QTreeView::branch:has-children:open {
 
 QTreeView::branch:has-children:closed {
   image: url(':/uitheme/icons/branch_closed.svg');
+}
+
+QTreeView::item:!selected {
+    color: #81a1c1;
 }
 
 /* ScrollBars */
